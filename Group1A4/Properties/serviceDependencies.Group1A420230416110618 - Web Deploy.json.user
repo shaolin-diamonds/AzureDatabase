@@ -1,0 +1,54 @@
+{
+  "dependencies": {
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2023-04-16T16:10:06.4671614Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2023-04-16T16:31:07.1474307Z"
+    }
+  },
+  "parameters": {
+    "Group1A420230416110618.resourceGroupName": {
+      "Name": "Group1A420230416110618.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "riosResourceGroup"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "fcb998ef-60a2-495e-830b-f7e6468c28ac"
+    },
+    "Group1A420230416110618.resourceGroupLocation": {
+      "Name": "Group1A420230416110618.resourceGroupLocation",
+      "Type": null,
+      "Value": "eastus"
+    },
+    "Group1A420230416110618.subscriptionId": {
+      "Name": "Group1A420230416110618.subscriptionId",
+      "Type": "subscription",
+      "Value": "fcb998ef-60a2-495e-830b-f7e6468c28ac"
+    },
+    "apis1.resourceGroupLocation": {
+      "Name": "apis1.resourceGroupLocation",
+      "Type": "location",
+      "Value": "eastus"
+    },
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "riosResourceGroup"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "fcb998ef-60a2-495e-830b-f7e6468c28ac"
+    },
+    "Group1A420230416110618.resourceName": {
+      "Name": "Group1A420230416110618.resourceName",
+      "Type": null,
+      "Value": "Group1A420230416110618"
+    }
+  }
+}
