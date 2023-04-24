@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IVFl6sfKUT7Ug9oZ0sVhu6YDduKaw7wglxAyk8JCYQhMJYfvyaq8o4Iq4wp4w9iTO/imntRPL2b4O4kSMynN4Q==",
+  "dgSpecHash": "UIFb/nxux0HtnhAnQXU8YAbHw7fRWAJ87i8x5sK2oc3u6bh6htnVba/aQgTC6NVK0CVwmZkSZdeMsDOwYu9K1g==",
   "success": true,
   "projectFilePath": "C:\\Users\\hungr\\Desktop\\C#\\Week11\\Group1A4\\Group1A4\\Group1A4.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\hungr\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\hungr\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\hungr\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\hungr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.3\\microsoft.aspnetcore.authentication.jwtbearer.6.0.3.nupkg.sha512",
     "C:\\Users\\hungr\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\hungr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\hungr\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

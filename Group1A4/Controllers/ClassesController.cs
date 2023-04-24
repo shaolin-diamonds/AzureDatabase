@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Group1A4.Data;
 using Group1A4.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Group1A4.Controllers
 {
@@ -16,19 +17,23 @@ namespace Group1A4.Controllers
     {
         private readonly SchoolContext _context;
 
-        public ClassesController(SchoolContext context)
+        private readonly AuthenticationController authenticationController;
+
+        public ClassesController(AuthenticationController authenticationController, SchoolContext context)
         {
+            this.authenticationController = authenticationController;
             _context = context;
         }
 
         // GET: api/Classes
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Class>>> GetClasses()
         {
-          if (_context.Classes == null)
-          {
-              return NotFound();
-          }
+            if (_context.Classes == null)
+            {
+                return NotFound();
+            }
             return await _context.Classes.ToListAsync();
         }
 
@@ -36,10 +41,10 @@ namespace Group1A4.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Class>> GetClass(int id)
         {
-          if (_context.Classes == null)
-          {
-              return NotFound();
-          }
+            if (_context.Classes == null)
+            {
+                return NotFound();
+            }
             var @class = await _context.Classes.FindAsync(id);
 
             if (@class == null)
@@ -86,10 +91,10 @@ namespace Group1A4.Controllers
         [HttpPost]
         public async Task<ActionResult<Class>> PostClass(Class @class)
         {
-          if (_context.Classes == null)
-          {
-              return Problem("Entity set 'SchoolContext.Classes'  is null.");
-          }
+            if (_context.Classes == null)
+            {
+                return Problem("Entity set 'SchoolContext.Classes'  is null.");
+            }
             _context.Classes.Add(@class);
             try
             {
@@ -133,6 +138,19 @@ namespace Group1A4.Controllers
         private bool ClassExists(int id)
         {
             return (_context.Classes?.Any(e => e.ClassId == id)).GetValueOrDefault();
+        }
+
+        [AllowAnonymous]
+        [HttpPost("Authorize")]
+        public IActionResult AuthUser([FromBody] User usr)
+        {
+            var token = authenticationController.Authenticate(usr.username, usr.password);
+
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(token);
         }
     }
 }

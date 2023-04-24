@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Group1A4.Data;
 using Group1A4.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Group1A4.Controllers
 {
@@ -16,12 +17,16 @@ namespace Group1A4.Controllers
     {
         private readonly SchoolContext _context;
 
-        public InstructorsController(SchoolContext context)
+        private readonly AuthenticationController authenticationController;
+
+        public InstructorsController(AuthenticationController authenticationController, SchoolContext context)
         {
+            this.authenticationController = authenticationController;
             _context = context;
         }
 
         // GET: api/Instructors
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Instructor>>> GetInstructors()
         {
@@ -133,6 +138,19 @@ namespace Group1A4.Controllers
         private bool InstructorExists(int id)
         {
             return (_context.Instructors?.Any(e => e.InstructorId == id)).GetValueOrDefault();
+        }
+
+        [AllowAnonymous]
+        [HttpPost("Authorize")]
+        public IActionResult AuthUser([FromBody] User usr)
+        {
+            var token = authenticationController.Authenticate(usr.username, usr.password);
+
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(token);
         }
     }
 }

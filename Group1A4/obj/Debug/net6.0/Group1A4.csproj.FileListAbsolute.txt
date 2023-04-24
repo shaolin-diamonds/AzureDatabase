@@ -288,3 +288,4 @@ C:\Users\hungr\Desktop\C#\Week11\Group1A4\Group1A4\obj\Debug\net6.0\refint\Group
 C:\Users\hungr\Desktop\C#\Week11\Group1A4\Group1A4\obj\Debug\net6.0\Group1A4.pdb
 C:\Users\hungr\Desktop\C#\Week11\Group1A4\Group1A4\obj\Debug\net6.0\Group1A4.genruntimeconfig.cache
 C:\Users\hungr\Desktop\C#\Week11\Group1A4\Group1A4\obj\Debug\net6.0\ref\Group1A4.dll
+C:\Users\hungr\Desktop\C#\Week11\Group1A4\Group1A4\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
